@@ -26,13 +26,13 @@ export default function FacilitiesSection() {
     },
     {
       icon: Armchair,
-      label: "Study Table",
-      value: "Personal Study table is offered",
+      name: "Study Table",
+      description: "Personal Study table is offered",
     },
     {
       icon: Columns3,
-      label: "Cupboard",
-      value: "Sharing Cupboard is provided",
+      name: "Cupboard",
+      description: "Sharing Cupboard is provided",
     },
     {
       icon: Bike,
