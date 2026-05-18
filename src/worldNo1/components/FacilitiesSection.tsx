@@ -8,7 +8,7 @@ import {
   Sun,
   Users,
   Armchair,
-  Cabinet,
+  Columns3,
 } from "lucide-react";
 import parkingImage from "../../assets/hstl_001/parking.jpg";
 
@@ -30,7 +30,7 @@ export default function FacilitiesSection() {
       value: "Personal Study table is offered",
     },
     {
-      icon: Cabinet,
+      icon: Columns3,
       label: "Cupboard",
       value: "Sharing Cupboard is provided",
     },
