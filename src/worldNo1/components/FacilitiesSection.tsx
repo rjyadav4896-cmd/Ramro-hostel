@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import {
   Bike,
-  BatteryCharging,
   GlassWater,
   BrushCleaning,
   Shirt,
@@ -9,6 +8,7 @@ import {
   Sun,
   Users,
   Armchair,
+  Cabinet,
 } from "lucide-react";
 import parkingImage from "../../assets/hstl_001/parking.jpg";
 
@@ -30,9 +30,9 @@ export default function FacilitiesSection() {
       value: "Personal Study table is offered",
     },
     {
-      icon: Armchair,
-      label: "Study Table",
-      value: "Personal Study table is offered",
+      icon: Cabinet,
+      label: "Cupboard",
+      value: "Sharing Cupboard is provided",
     },
     {
       icon: Bike,
@@ -58,11 +58,6 @@ export default function FacilitiesSection() {
       icon: BrushCleaning,
       name: "Room responsibility",
       description: "Room cleaning is handled by students.",
-    },
-    {
-      icon: BatteryCharging,
-      name: "Power backup",
-      description: "Available for practical daily continuity.",
     },
   ];
 
