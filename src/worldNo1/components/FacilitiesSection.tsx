@@ -30,6 +30,11 @@ export default function FacilitiesSection() {
       value: "Personal Study table is offered",
     },
     {
+      icon: Armchair,
+      label: "Study Table",
+      value: "Personal Study table is offered",
+    },
+    {
       icon: Bike,
       name: "Parking",
       description: "Bike and scooter parking inside the hostel block.",
