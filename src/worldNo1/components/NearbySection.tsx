@@ -1,29 +1,60 @@
-import { motion } from 'motion/react';
-import { BookOpen, MapPinned, ShoppingBag, Trees, University } from 'lucide-react';
-import building from '../../assets/hstl_001/main-building.jpg';
+import { motion } from "motion/react";
+import {
+  BookOpen,
+  MapPinned,
+  ShoppingBag,
+  Trees,
+  University,
+} from "lucide-react";
+import building from "../../assets/hstl_001/main-building.jpg";
 
 const places = [
-  { icon: University, name: 'KMC College', time: '1 min walk' },
-  { icon: ShoppingBag, name: 'Mall', time: '4 min walk' },
-  { icon: Trees, name: 'Ratna Park', time: '8 min walk' },
-  { icon: BookOpen, name: 'Library', time: '3 min walk' },
-  { icon: MapPinned, name: 'Stationery', time: '1 min walk' }
+  { icon: University, name: "KMC College", time: "1 min walk" },
+  { icon: ShoppingBag, name: "Mall", time: "4 min walk" },
+  { icon: Trees, name: "Ratna Park", time: "8 min walk" },
+  { icon: BookOpen, name: "Library", time: "3 min walk" },
+  { icon: MapPinned, name: "Stationery", time: "1 min walk" },
 ];
 
 export default function NearbySection() {
   return (
-    <section id="nearby" className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section
+      id="nearby"
+      className="py-20 bg-gradient-to-b from-slate-50 to-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="overflow-hidden rounded-2xl shadow-xl">
-            <img src={building} alt="Ramro Hostel building near student essentials" className="h-[520px] w-full object-cover" />
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="overflow-hidden rounded-2xl shadow-xl"
+          >
+            <img
+              src={building}
+              alt="Ramro Hostel building near student essentials"
+              className="h-[520px] w-full object-cover"
+            />
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Nearby Places</p>
-            <h2 className="mt-2 text-3xl md:text-5xl font-bold text-slate-950">Everything students need is close</h2>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">
+              Nearby Places
+            </p>
+            <h2 className="mt-2 text-3xl md:text-5xl font-bold text-slate-950">
+              Everything students need is close
+            </h2>
             <p className="mt-4 text-lg text-slate-600">
-              The Ramro Hostel submission places Ramro Hostel near colleges, a mall, library, stationery, and Ratna Park access.
+              “Our location keeps your daily life effortless — from shopping and
+              entertainment to every important service you may need, everything
+              is just a minute away, so you can focus completely on your
+              dreams.”
             </p>
 
             <div className="mt-8 grid sm:grid-cols-2 gap-4">

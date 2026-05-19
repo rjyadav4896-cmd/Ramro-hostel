@@ -1,21 +1,51 @@
-import { motion } from 'motion/react';
-import { CheckCircle2, PlugZap, Shirt, UserRoundCheck } from 'lucide-react';
+import { motion } from "motion/react";
+import { CheckCircle2, PlugZap, Shirt, UserRoundCheck } from "lucide-react";
 
 export default function GuidelinesSection() {
   const guidelines = [
-    { icon: CheckCircle2, title: 'Bring essentials', text: 'New students should bring bedsheet, pillow, pillow cover, and blanket.' },
-    { icon: PlugZap, title: 'Electric items', text: 'Electric kettle is allowed. Iron is not listed as allowed in the submission.' },
-    { icon: UserRoundCheck, title: 'Visitors', text: 'Students can meet people inside the hostel when visitors are parents.' },
-    { icon: Shirt, title: 'Room care', text: 'Room cleaning is handled by students; bathroom cleaning is provided once a week.' }
+    {
+      icon: CheckCircle2,
+      title: "Bring essentials",
+      text: "New students should bring bedsheet, pillow, pillow cover, and blanket.",
+    },
+    {
+      icon: PlugZap,
+      title: "Electric items",
+      text: "Electric kettle is allowed. Iron is not listed as allowed in the submission.",
+    },
+    {
+      icon: UserRoundCheck,
+      title: "Visitors",
+      text: "Students can meet people inside the hostel when visitors are parents.",
+    },
+    {
+      icon: Shirt,
+      title: "Room care",
+      text: "Room cleaning is handled by students; bathroom cleaning is provided once a week.",
+    },
   ];
 
   return (
     <section id="guidelines" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
-          <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Student Guidelines</p>
-          <h2 className="mt-2 text-3xl md:text-5xl font-bold text-slate-950">Know before you move in</h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Simple expectations from the Ramrro Hostel form so students and parents know what to prepare.</p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
+          <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">
+            Student Guidelines
+          </p>
+          <h2 className="mt-2 text-3xl md:text-5xl font-bold text-slate-950">
+            Know before you move in
+          </h2>
+          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+            “Just a few simple expectations — so students and parents can come
+            prepared, feel comfortable, and step into their second home with
+            confidence, peace, and a sense of belonging.”
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -31,7 +61,9 @@ export default function GuidelinesSection() {
                 className="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200"
               >
                 <Icon className="w-8 h-8 text-emerald-700 mb-4" />
-                <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
+                <h3 className="text-xl font-bold text-slate-950">
+                  {item.title}
+                </h3>
                 <p className="mt-2 text-slate-600">{item.text}</p>
               </motion.div>
             );

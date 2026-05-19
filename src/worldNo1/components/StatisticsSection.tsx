@@ -23,8 +23,8 @@ export default function StatisticsSection() {
     },
     {
       icon: CalendarDays,
-      label: "Festivals",
-      value: "Remains open in Dashain and Tihar",
+      label: "On Dashain and Tihar",
+      value: "Remains open",
       tone: "bg-rose-100 text-rose-800",
     },
   ];
