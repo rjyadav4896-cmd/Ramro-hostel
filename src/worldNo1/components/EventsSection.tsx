@@ -55,12 +55,7 @@ export default function EventsSection() {
   const galleryGridClass = activeGallery === 'student' ? 'lg:grid-cols-4' : 'lg:grid-cols-3';
 
   return (
-    <section
-      id="events"
-      className={`scroll-mt-16 bg-gradient-to-b from-white via-emerald-50/30 to-white pt-8 sm:pt-10 ${
-        activeGallery ? 'pb-14 sm:pb-16' : 'pb-2 sm:pb-4'
-      }`}
-    >
+    <section id="events" className="scroll-mt-16 bg-gradient-to-b from-white via-emerald-50/30 to-white pb-14 pt-8 sm:pb-16 sm:pt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mx-auto mb-7 max-w-3xl text-center">
           <p className="text-sm font-bold uppercase text-emerald-700">Community</p>
@@ -85,7 +80,7 @@ export default function EventsSection() {
                 whileTap={{ scale: 0.98 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: index * 0.08 }}
-                onClick={() => setActiveGallery(key)}
+                onClick={() => setActiveGallery((current) => (current === key ? null : key))}
                 aria-pressed={isActive}
                 className={`group relative h-64 overflow-hidden rounded-lg bg-slate-950 text-left shadow-lg outline-none transition-shadow duration-500 sm:h-72 focus-visible:ring-4 focus-visible:ring-emerald-300 ${
                   isActive ? 'ring-4 ring-emerald-500/25 shadow-2xl' : 'hover:shadow-2xl'

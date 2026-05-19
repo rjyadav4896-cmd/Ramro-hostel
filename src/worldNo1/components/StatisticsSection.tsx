@@ -1,15 +1,10 @@
 import { motion } from "motion/react";
-import {
-  CalendarDays,
-  CircleDollarSign,
-  MoonIcon,
-  Sunrise,
-} from "lucide-react";
+import { CalendarDays, IndianRupee, MoonIcon, Sunrise } from "lucide-react";
 
 export default function StatisticsSection() {
   const details = [
     {
-      icon: CircleDollarSign,
+      icon: IndianRupee,
       label: "Admission Fee",
       value: "Rs. 2,000",
       tone: "bg-amber-100 text-amber-800",
@@ -29,7 +24,7 @@ export default function StatisticsSection() {
     {
       icon: CalendarDays,
       label: "Festivals",
-      value: "Open",
+      value: "Remains open in Dashain and Tihar",
       tone: "bg-rose-100 text-rose-800",
     },
   ];
