@@ -62,7 +62,10 @@ export default function FacilitiesSection() {
   ];
 
   return (
-    <section id="facilities" className="scroll-mt-16 bg-gradient-to-b from-white via-slate-50 to-white py-14 sm:py-16">
+    <section
+      id="facilities"
+      className="scroll-mt-16 bg-gradient-to-b from-white via-slate-50 to-white py-14 sm:py-16"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.35fr] lg:items-start">
           <motion.div
@@ -79,8 +82,10 @@ export default function FacilitiesSection() {
               Services that matter every week
             </h2>
             <p className="mt-3 text-base leading-7 text-slate-600">
-              Daily essentials, clean shared spaces, parking, laundry, terrace
-              access, and visitor support are arranged around student routines.
+              “From daily essentials and clean shared spaces to laundry,
+              parking, terrace access, and visitor support — every facility is
+              thoughtfully arranged around students’ routines, comfort, and the
+              feeling of living at home away from home.”
             </p>
             <div className="group relative mt-5 overflow-hidden rounded-lg bg-slate-950 shadow-xl">
               <img
