@@ -10,7 +10,7 @@ import {
   Armchair,
   Columns3,
 } from "lucide-react";
-import parkingImage from "../../assets/hstl_001/parking.jpg";
+import parkingImage from "../../assets/hstl_001/parking-hd.jpg";
 
 export default function FacilitiesSection() {
   const available = [

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Clock, Drumstick, Soup, UtensilsCrossed } from "lucide-react";
-import messImage from "../../assets/hstl_001/mess.avif";
+import messImage from "../../assets/hstl_001/mess-hd.jpg";
 
 export default function FoodSection() {
   const timings = [

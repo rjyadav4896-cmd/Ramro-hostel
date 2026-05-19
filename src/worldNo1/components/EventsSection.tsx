@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ChevronRight, Images, PartyPopper, UsersRound } from 'lucide-react';
-import holiImage from '../../assets/hstl_001/festival-holi.jpg';
-import festivalImage from '../../assets/hstl_001/festival-2.jpg';
-import messImage from '../../assets/hstl_001/mess.avif';
-import roomThreeImage from '../../assets/hstl_001/room-3sharing.png';
-import roomFourImage from '../../assets/hstl_001/room-4sharing.jpg';
-import studentImage from '../../assets/hstl_001/student-life.jpg';
-import studentImageTwo from '../../assets/hstl_001/student-life-2.jpg';
+import holiImage from '../../assets/hstl_001/festival-holi-hd.jpg';
+import festivalImage from '../../assets/hstl_001/festival-2-hd.jpg';
+import messImage from '../../assets/hstl_001/mess-hd.jpg';
+import roomThreeImage from '../../assets/hstl_001/room-3sharing-hd.jpg';
+import roomFourImage from '../../assets/hstl_001/room-4sharing-hd.jpg';
+import studentImage from '../../assets/hstl_001/student-life-hd.jpg';
+import studentImageTwo from '../../assets/hstl_001/student-life-2-hd.jpg';
 
 type GalleryKey = 'festival' | 'student';
 

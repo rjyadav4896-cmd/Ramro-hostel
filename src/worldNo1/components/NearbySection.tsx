@@ -6,7 +6,7 @@ import {
   Trees,
   University,
 } from "lucide-react";
-import building from "../../assets/hstl_001/main-building.jpg";
+import building from "../../assets/hstl_001/main-building-hd.jpg";
 
 const places = [
   { icon: University, name: "KMC College", time: "1 min walk" },

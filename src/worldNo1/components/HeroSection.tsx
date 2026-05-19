@@ -1,8 +1,6 @@
 import { motion } from 'motion/react';
 import { Clock, MapPin, Phone, ShieldCheck, Bus, IndianRupee } from 'lucide-react';
-import heroImage from '../../assets/hstl_001/main-building.jpg';
-import roomImage from '../../assets/hstl_001/room-2sharing.jpg';
-import festivalImage from '../../assets/hstl_001/festival-holi.jpg';
+import heroImage from '../../assets/hstl_001/main-building-hd.jpg';
 
 export default function HeroSection() {
   const highlights = [

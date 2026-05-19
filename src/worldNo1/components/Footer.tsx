@@ -1,20 +1,24 @@
-import { Facebook, Instagram, MapPin, Phone } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Rooms', href: '#rooms' },
-    { name: 'Facilities', href: '#facilities' },
-    { name: 'Food', href: '#food' },
-    { name: 'Nearby', href: '#nearby' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "Rooms", href: "#rooms" },
+    { name: "Facilities", href: "#facilities" },
+    { name: "Food", href: "#food" },
+    { name: "Nearby", href: "#nearby" },
+    { name: "Contact", href: "#contact" },
   ];
 
-  const rules = ['Gate in time: 9:00 PM', 'Gate out time: 5:00 PM', 'Visitors: parents only', 'Electric kettle allowed'];
+  const rules = [
+    "Gate in time: 9:00 PM",
+    "Gate out time: 5:00 PM",
+    "Visitors: parents only",
+  ];
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id.replace('#', ''));
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(id.replace("#", ""));
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -26,11 +30,21 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-amber-500 rounded-xl flex items-center justify-center">
                 <span className="text-white font-black text-xl">R</span>
               </div>
-              <span className="ml-2 font-black text-xl text-white">Ramro Hostel</span>
+              <span className="ml-2 font-black text-xl text-white">
+                Ramro Hostel
+              </span>
             </div>
-            <p className="text-slate-400 mb-4">Ramro Hostel · Student living in Narephat, Kathmandu.</p>
+            <p className="text-slate-400 mb-4">
+              Ramro Hostel · Student living in Narephat, Kathmandu.
+            </p>
             <div className="flex space-x-3">
-              <a href="https://www.facebook.com/share/p/1Cvgba2zXm/" target="_blank" rel="noreferrer" aria-label="Facebook" className="w-9 h-9 bg-white/10 hover:bg-emerald-700 rounded-lg flex items-center justify-center transition-colors">
+              <a
+                href="https://www.facebook.com/share/p/1Cvgba2zXm/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="w-9 h-9 bg-white/10 hover:bg-emerald-700 rounded-lg flex items-center justify-center transition-colors"
+              >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
@@ -50,7 +64,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <button onClick={() => scrollToSection(link.href)} className="text-slate-400 hover:text-amber-300 transition-colors">
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-slate-400 hover:text-amber-300 transition-colors"
+                  >
                     {link.name}
                   </button>
                 </li>
@@ -83,7 +100,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Ramro Hostel. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Ramro Hostel. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

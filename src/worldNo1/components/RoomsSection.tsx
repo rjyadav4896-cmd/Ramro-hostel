@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
-import room2 from '../../assets/hstl_001/room-2sharing.jpg';
-import room3 from '../../assets/hstl_001/room-3sharing.png';
-import room4 from '../../assets/hstl_001/room-4sharing.jpg';
+import room2 from '../../assets/hstl_001/room-2sharing-hd.jpg';
+import room3 from '../../assets/hstl_001/room-3sharing-hd.jpg';
+import room4 from '../../assets/hstl_001/room-4sharing-hd.jpg';
 
 export default function RoomsSection() {
   const rooms = [
