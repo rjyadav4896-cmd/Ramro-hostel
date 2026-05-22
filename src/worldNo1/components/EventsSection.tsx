@@ -1,15 +1,37 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ChevronRight, Images, PartyPopper, UsersRound } from 'lucide-react';
+import buildingImage from '../../assets/hstl_001/main-building-hd.jpg';
 import holiImage from '../../assets/hstl_001/festival-holi-hd.jpg';
 import festivalImage from '../../assets/hstl_001/festival-2-hd.jpg';
 import messImage from '../../assets/hstl_001/mess-hd.jpg';
+import parkingImage from '../../assets/hstl_001/parking-hd.jpg';
+import roomTwoImage from '../../assets/hstl_001/room-2sharing-hd.jpg';
 import roomThreeImage from '../../assets/hstl_001/room-3sharing-hd.jpg';
 import roomFourImage from '../../assets/hstl_001/room-4sharing-hd.jpg';
 import studentImage from '../../assets/hstl_001/student-life-hd.jpg';
 import studentImageTwo from '../../assets/hstl_001/student-life-2-hd.jpg';
 
 type GalleryKey = 'festival' | 'student';
+type ActiveGalleryKey = GalleryKey | 'all';
+
+type GalleryPhoto = {
+  title: string;
+  image: string;
+};
+
+const allPhotos = [
+  { title: 'Main Building', image: buildingImage },
+  { title: 'Student Community', image: studentImage },
+  { title: 'Shared Living', image: studentImageTwo },
+  { title: 'Holi Celebration', image: holiImage },
+  { title: 'Dashain & Tihar Stay', image: festivalImage },
+  { title: 'Mess Area', image: messImage },
+  { title: 'Two Sharing Room', image: roomTwoImage },
+  { title: 'Three Sharing Room', image: roomThreeImage },
+  { title: 'Four Sharing Room', image: roomFourImage },
+  { title: 'Two-Wheeler Parking', image: parkingImage }
+];
 
 const galleries = {
   festival: {
@@ -45,14 +67,14 @@ const galleries = {
     cover: string;
     accent: string;
     icon: typeof PartyPopper;
-    photos: { title: string; image: string }[];
+    photos: GalleryPhoto[];
   }
 >;
 
 export default function EventsSection() {
-  const [activeGallery, setActiveGallery] = useState<GalleryKey | null>(null);
-  const active = activeGallery ? galleries[activeGallery] : null;
-  const galleryGridClass = activeGallery === 'student' ? 'lg:grid-cols-4' : 'lg:grid-cols-3';
+  const [activeGallery, setActiveGallery] = useState<ActiveGalleryKey | null>(null);
+  const activePhotos = activeGallery === 'all' ? allPhotos : activeGallery ? galleries[activeGallery].photos : null;
+  const galleryGridClass = activeGallery === 'festival' ? 'lg:grid-cols-3' : 'lg:grid-cols-4';
 
   return (
     <section id="events" className="scroll-mt-16 bg-gradient-to-b from-white via-emerald-50/30 to-white pb-14 pt-8 sm:pb-16 sm:pt-10">
@@ -64,7 +86,7 @@ export default function EventsSection() {
         </motion.div>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {(Object.keys(galleries) as GalleryKey[]).map((key, index) => {
+          {(['festival', 'student'] as const).map((key, index) => {
             const gallery = galleries[key];
             const Icon = gallery.icon;
             const isActive = activeGallery === key;
@@ -109,8 +131,29 @@ export default function EventsSection() {
           })}
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45, delay: 0.15 }}
+          className="mt-6 flex justify-center"
+        >
+          <button
+            type="button"
+            onClick={() => setActiveGallery((current) => (current === 'all' ? null : 'all'))}
+            aria-pressed={activeGallery === 'all'}
+            className={`inline-flex items-center gap-2 rounded-lg px-6 py-3 font-bold transition-all focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 ${
+              activeGallery === 'all'
+                ? 'bg-emerald-700 text-white shadow-lg'
+                : 'bg-slate-950 text-white shadow-sm hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg'
+            }`}
+          >
+            Gallery
+          </button>
+        </motion.div>
+
         <AnimatePresence mode="wait">
-          {active && (
+          {activePhotos && (
             <motion.div
               key={activeGallery}
               initial={{ opacity: 0, y: 28, scale: 0.98, filter: 'blur(10px)' }}
@@ -120,7 +163,7 @@ export default function EventsSection() {
               className="mt-4 overflow-hidden"
             >
               <div className={`grid gap-4 sm:grid-cols-2 ${galleryGridClass}`}>
-                {active.photos.map((photo, index) => (
+                {activePhotos.map((photo, index) => (
                   <motion.figure
                     key={`${activeGallery}-${photo.title}`}
                     initial={{ opacity: 0, y: 22, scale: 0.96 }}
