@@ -63,7 +63,6 @@ export default function RoomsSection() {
                     <h3 className="text-2xl font-bold text-slate-950">
                       {room.type}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-600">{room.note}</p>
                   </div>
                   <div className="rounded-xl bg-amber-100 px-3 py-2 text-right">
                     <div className="text-lg font-black text-slate-950">
@@ -71,18 +70,6 @@ export default function RoomsSection() {
                     </div>
                     <div className="text-xs text-slate-600">per month</div>
                   </div>
-                </div>
-
-                <div className="mt-6 space-y-2">
-                  {room.facilities.map((facility) => (
-                    <div
-                      key={facility}
-                      className="flex items-center text-sm text-slate-700"
-                    >
-                      <span className="mr-2 h-1.5 w-1.5 rounded-full bg-emerald-600" />
-                      {facility}
-                    </div>
-                  ))}
                 </div>
               </div>
             </motion.div>
