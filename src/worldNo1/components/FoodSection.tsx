@@ -74,10 +74,17 @@ export default function FoodSection() {
 
             <div className="grid sm:grid-cols-2 gap-4">
               {timings.map((item) => (
-                <div key={item.label} className="rounded-xl bg-slate-50 p-4">
-                  <Clock className="w-5 h-5 text-emerald-700 mb-2" />
+                <div
+                  key={item.label}
+                  className="group rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200 transition-all hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                >
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 transition duration-300 group-hover:bg-emerald-700 group-hover:text-white">
+                    <Clock className="h-5 w-5" />
+                  </div>
                   <div className="font-bold text-slate-950">{item.label}</div>
-                  <div className="text-sm text-slate-600">{item.time}</div>
+                  <div className="mt-1 text-sm text-slate-600">
+                    {item.time}
+                  </div>
                 </div>
               ))}
             </div>

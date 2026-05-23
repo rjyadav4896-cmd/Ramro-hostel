@@ -5,6 +5,7 @@ import RoomsSection from './components/RoomsSection';
 import FacilitiesSection from './components/FacilitiesSection';
 import FoodSection from './components/FoodSection';
 import EventsSection from './components/EventsSection';
+import StudentSuccessSection from './components/StudentSuccessSection';
 import GuidelinesSection from './components/GuidelinesSection';
 import StatisticsSection from './components/StatisticsSection';
 // import GallerySection from './components/GallerySection';
@@ -25,6 +26,7 @@ export default function HomePage() {
       <FacilitiesSection />
       <FoodSection />
       <EventsSection />
+      <StudentSuccessSection />
       <GuidelinesSection />
       <StatisticsSection />
       {/* <GallerySection /> */}

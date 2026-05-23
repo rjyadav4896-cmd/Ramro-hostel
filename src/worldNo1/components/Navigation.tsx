@@ -18,6 +18,7 @@ export default function Navigation() {
     { name: 'Facilities', id: 'facilities' },
     { name: 'Food', id: 'food' },
     { name: 'Events', id: 'events' },
+    { name: 'Success', id: 'success' },
     { name: 'Guidelines', id: 'guidelines' },
     { name: 'Nearby', id: 'nearby' },
     { name: 'Contact', id: 'contact' }
