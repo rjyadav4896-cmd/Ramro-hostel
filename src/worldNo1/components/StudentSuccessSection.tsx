@@ -59,6 +59,10 @@ export default function StudentSuccessSection() {
     [activeIndex],
   );
 
+  const showNextTestimonial = useCallback(() => {
+    showTestimonial((activeIndex + 1) % testimonials.length);
+  }, [activeIndex, showTestimonial]);
+
   useEffect(() => {
     if (isPaused) return;
 
@@ -87,7 +91,8 @@ export default function StudentSuccessSection() {
           Topper Stories
         </h2>
         <div
-          className="relative mx-auto min-h-[188px] max-w-[888px] rounded-2xl bg-white px-6 py-6 shadow-xl ring-1 ring-slate-200 sm:h-[188px]"
+          className="relative mx-auto min-h-[188px] max-w-[888px] cursor-pointer rounded-2xl bg-white px-6 py-6 shadow-xl ring-1 ring-slate-200 sm:h-[188px]"
+          onClick={showNextTestimonial}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -134,7 +139,10 @@ export default function StudentSuccessSection() {
                 <button
                   key={testimonial.name}
                   type="button"
-                  onClick={() => showTestimonial(index)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    showTestimonial(index);
+                  }}
                   aria-label={`Show ${testimonial.name}'s testimonial`}
                   aria-current={isActive}
                   className={`h-2 w-2 rounded-full transition-colors duration-300 ${
